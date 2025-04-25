@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>VoIP Caller-ID WebApp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>VoIP Caller-ID</h1>
+
+    <input id="sipServer" placeholder="SIP WS URL (ws://IP:porta)" />
+    <input id="sipUser"   placeholder="SIP Username" />
+    <input id="sipPass"   type="password" placeholder="SIP Password" />
+    <input id="callerId"  placeholder="Caller ID finto (+39...)" />
+    <input id="target"    placeholder="Numero/Interno da chiamare" />
+
+    <button id="connectBtn">Connetti</button>
+    <button id="callBtn" disabled>Chiama</button>
+    <button id="hangupBtn" disabled>Riaggancia</button>
+
+    <div id="status"></div>
+    <audio id="remoteAudio" autoplay></audio>
+  </div>
+
+  <script src="https://unpkg.com/sip.js@0.21.7/dist/sip.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
